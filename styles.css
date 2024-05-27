@@ -330,7 +330,104 @@ p {
     0 0 0 1px var(--card-hover-border-color);
 }
 
+/* tooltips for project boxes */
+
+.projectTitle::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  z-index: 5;
+  background: var(--background-color);
+  color: white;
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  pointer-events: none;
+  left: 150px;
+  bottom: 150px;
+}
+
+.projectTitle:hover::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+.shoppingListApp::before{
+  left: 40px;
+  bottom: 185px;
+}
+
+.faqPage::before{
+  left: 110px;
+}
+
+.firstPortfolio::before {
+  left: 10px;
+  bottom: 185px;
+}
+
+.newsletterPage::before {
+  left: 30px;
+  bottom: 185px;
+}
+
+.stoneShoppingSite::before {
+  left: 30px;
+  bottom: 185px;
+}
+
+.qrComponent::before {
+  left: 20px;
+  bottom: 185px;
+}
+
+.blogCard::before {
+  left: 100px;
+}
+
+.resultsComponent::before {
+  left: 50px;
+  bottom: 185px;
+}
+
+.socialPage::before {
+  left: 30px;
+  bottom: 185px;
+}
+
+/* TODO : Recipe Page tooltip broken. */
+
+.companyInfoPage::before {
+  left: 15px;
+  bottom: 185px;
+}
+
+
+
+
+
+
+/* Mobile Responsiveness Part */
+
+@media only screen and (max-width: 600px) {
+  .main-section-text {
+  }
+}
+
+
+
+
+
+
+
+
+
+
 /* background preview of projects */
+
+
 .card:nth-child(1):hover {
   background: url(assets/shoppinglistapppreview.png);
   background-color: rgba(0, 0, 0, 0.8);
