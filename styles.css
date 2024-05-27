@@ -341,7 +341,7 @@ p {
 }
 
 .card:nth-child(2):hover {
-  background: url(https://github.com/r-ddle/faq-accordion-page/raw/main/screenshot.jpg);
+  background: url(assets/faqpreview.png);
   background-color: rgba(0, 0, 0, 0.8);
   background-blend-mode: multiply;
   background-repeat: no-repeat;
@@ -441,6 +441,15 @@ p {
 
 .card:nth-child(11):hover{
   background: url(assets/companyinfopreview.png);
+  background-color: rgba(0, 0, 0, 0.8);
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.card:nth-child(12):hover{
+  background: url(assets/calculatorapppreview.png);
   background-color: rgba(0, 0, 0, 0.8);
   background-blend-mode: multiply;
   background-repeat: no-repeat;
