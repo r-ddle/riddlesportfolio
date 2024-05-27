@@ -1,3 +1,15 @@
+:root {
+  --background-color: #18181b;
+  --card-box-shadow-1-y: 3px;
+  --card-box-shadow-1-blur: 6px;
+  --card-box-shadow-1: rgba(0, 0, 0, 0.05);
+  --card-box-shadow-2-y: 8px;
+  --card-box-shadow-2-blur: 15px;
+  --card-box-shadow-2: rgba(0, 0, 0, 0.1);
+  --card-border-color: rgba(255, 255, 255, 0.1);
+  --card-background-color: rgba(255, 255, 255, 0.015);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,8 +20,8 @@
 }
 
 body {
-  font-family: 'JetBrains Mono', monospace;
-  background: linear-gradient(100deg, rgb(15, 15, 15) 0%, rgba(0,0,0,1) 31%);
+  font-family: "JetBrains Mono", monospace;
+  background: linear-gradient(100deg, rgb(15, 15, 15) 0%, rgba(0, 0, 0, 1) 31%);
 }
 
 section {
@@ -37,7 +49,7 @@ p {
 
 /* index.html */
 
-.container{
+.container {
   min-height: 100vh;
 }
 
@@ -49,7 +61,7 @@ p {
   justify-content: space-between;
 }
 
-.about-btn a{
+.about-btn a {
   background-color: rgba(241, 241, 241, 0.1);
   box-shadow: 0 15px 35px rgba(36, 35, 35, 0.3);
   border: 1px solid rgba(255, 255, 255, 0.125);
@@ -68,7 +80,7 @@ p {
   -webkit-backdrop-filter: blur(16px) saturate(180%);
 }
 
-.contact-btn a{
+.contact-btn a {
   background-color: rgba(241, 241, 241, 0.1);
   box-shadow: 0 15px 35px rgba(36, 35, 35, 0.3);
   border: 1px solid rgba(255, 255, 255, 0.125);
@@ -87,7 +99,7 @@ p {
   -webkit-backdrop-filter: blur(16px) saturate(180%);
 }
 
-.support-btn a{
+.support-btn a {
   background-color: rgba(241, 241, 241, 0.1);
   box-shadow: 0 15px 35px rgba(36, 35, 35, 0.3);
   border: 1px solid rgba(255, 255, 255, 0.125);
@@ -111,12 +123,16 @@ p {
 .about-btn a:hover {
   letter-spacing: 3px;
   color: transparent;
-  background: radial-gradient(circle, rgb(250, 116, 174) 0%, rgb(84, 161, 248) 100%);
+  background: radial-gradient(
+    circle,
+    rgb(250, 116, 174) 0%,
+    rgb(84, 161, 248) 100%
+  );
   background-size: 200% 200%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
-  animation: animated-bg  1s ease-in-out infinite;
+  animation: animated-bg 1s ease-in-out infinite;
   -webkit-animation: animated-bg 1s ease-in-out infinite;
   -moz-animation: animated-bg 1s ease-in-out infinite;
   margin-bottom: 10px;
@@ -158,53 +174,75 @@ p {
   font-weight: 700;
   color: transparent;
   /* gradient inside the text */
-  background: radial-gradient(circle, rgb(250, 116, 174) 0%, rgb(84, 161, 248) 100%);
+  background: radial-gradient(
+    circle,
+    rgb(250, 116, 174) 0%,
+    rgb(84, 161, 248) 100%
+  );
   background-size: 200% 200%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
-  animation: animated-bg  10s ease infinite;
+  animation: animated-bg 10s ease infinite;
   -webkit-animation: animated-bg 10s ease infinite;
   -moz-animation: animated-bg 10s ease infinite;
-  font-family: 'Poppins';
+  font-family: "Poppins";
 }
 
 @-webkit-keyframes animated-bg {
-  0%{background-position:10% 0%}
-  50%{background-position:91% 100%}
-  100%{background-position:10% 0%}
+  0% {
+    background-position: 10% 0%;
+  }
+  50% {
+    background-position: 91% 100%;
+  }
+  100% {
+    background-position: 10% 0%;
+  }
 }
 @-moz-keyframes animated-bg {
-  0%{background-position:10% 0%}
-  50%{background-position:91% 100%}
-  100%{background-position:10% 0%}
+  0% {
+    background-position: 10% 0%;
+  }
+  50% {
+    background-position: 91% 100%;
+  }
+  100% {
+    background-position: 10% 0%;
+  }
 }
-@keyframes animated-bg { 
-  0%{background-position:10% 0%}
-  50%{background-position:91% 100%}
-  100%{background-position:10% 0%}
+@keyframes animated-bg {
+  0% {
+    background-position: 10% 0%;
+  }
+  50% {
+    background-position: 91% 100%;
+  }
+  100% {
+    background-position: 10% 0%;
+  }
 }
 
-.main-section p{
+.main-section p {
   text-align: center;
   margin-top: 10px;
-  font-family: 'Poppins';
+  font-family: "Poppins";
 }
 
-.main-section h1{
+.main-section h1 {
   text-align: center;
 }
 
-.prog-languages{
+.prog-languages {
   font-weight: 700;
-  color: rgba(148,187,233,1);
-  font-family: 'Poppins';
+  color: rgba(148, 187, 233, 1);
+  font-family: "Poppins";
 }
 
 .grid {
   position: absolute;
   height: 100%;
-  weight: 100%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -216,8 +254,196 @@ p {
   height: 100%;
   width: 100%;
   position: relative;
-  margin-left: 220px;
-  margin-bottom: 100px;
+  margin-left: 200px;
+  margin-bottom: 50px;
   z-index: 1;
 }
 
+
+
+
+/* project section */
+
+.projects-header {
+  position: relative;
+  left: 35%;
+  color: rgba(148, 187, 233, 1);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  grid-gap: 32px;
+  position: relative;
+  margin-top: 20px;
+}
+
+.card {
+  display: flex;
+  color: white;
+  background: var(--background-color);
+  box-shadow: 0px var(--card-box-shadow-1-y) var(--card-box-shadow-1-blur)
+      var(--card-box-shadow-1),
+    0px var(--card-box-shadow-2-y) var(--card-box-shadow-2-blur)
+      var(--card-box-shadow-2),
+    0 0 0 1px var(--card-border-color);
+  padding: 20px 16px 16px 16px;
+  border-radius: 15px;
+  position: relative;
+  transition: box-shadow 0.25s ease;
+  transition: background 0.5s ease;
+  height: 200px;
+
+  h3 {
+    z-index: 2;
+    position: relative;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 2;
+    color: white;
+    margin-bottom: 5px;
+  }
+
+  hr {
+    margin-bottom: 5px;
+  }
+
+  p {
+    z-index: 2;
+    position: relative;
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+.card h3 {
+  font-family: "Poppins";
+}
+
+.card:hover {
+  box-shadow: 0px 3px 6px var(--card-hover-box-shadow-1),
+    0px var(--card-hover-box-shadow-2-y) var(--card-hover-box-shadow-2-blur)
+      var(--card-hover-box-shadow-2),
+    0 0 0 1px var(--card-hover-border-color);
+}
+
+/* background preview of projects */
+.card:nth-child(1):hover {
+  background: url(assets/shoppinglistapppreview.png);
+  background-color: rgba(0, 0, 0, 0.8);
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.card:nth-child(2):hover {
+  background: url(https://github.com/r-ddle/faq-accordion-page/raw/main/screenshot.jpg);
+  background-color: rgba(0, 0, 0, 0.8);
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.card:nth-child(3):hover{
+  background: url(assets/firstportfoliopreview.png);
+  background-color: rgba(0, 0, 0, 0.8);
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.card:nth-child(4):hover{
+  background: url(assets/newsletterpreview.png);
+  background-color: rgba(0, 0, 0, 0.8);
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.card:nth-child(5):hover{
+  background: url(assets/stonepatternsitepreview.png);
+  background-color: rgba(0, 0, 0, 0.8);
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.card:nth-child(5) {
+  img {
+    height: 25px;
+    width: 25px;
+    object-fit: cover;
+    border-radius: 999px;
+    transform: translateY(5px);
+  }
+
+  span {
+    font-size: 16px;
+  }
+
+  a {
+    color: #dc2626;
+  }
+}
+
+.card:nth-child(6):hover{
+  background: url(assets/qrcomponentpreview.png);
+  background-color: rgba(0, 0, 0, 0.8);
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.card:nth-child(7):hover{
+  background: url(assets/blogcardpreview.png);
+  background-color: rgba(0, 0, 0, 0.8);
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.card:nth-child(8):hover{
+  background: url(assets/resultsummarypreview.jpg);
+  background-color: rgba(0, 0, 0, 0.8);
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.card:nth-child(9):hover{
+  background: url(assets/socialprofilepagepreview.jpg);
+  background-color: rgba(0, 0, 0, 0.8);
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.card:nth-child(10):hover{
+  background: url(assets/recipepagepreview.jpg);
+  background-color: rgba(0, 0, 0, 0.8);
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.card:nth-child(11):hover{
+  background: url(assets/companyinfopreview.png);
+  background-color: rgba(0, 0, 0, 0.8);
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
