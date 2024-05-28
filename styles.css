@@ -17,10 +17,7 @@
   scroll-behavior: smooth;
   -webkit-user-select: none;
   user-select: none;
-}
-
-html {
-  width: 100vw;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -491,7 +488,10 @@ p {
   }
 
   .card {
-    width: 100%;
+    width: 450px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .card-grid {
